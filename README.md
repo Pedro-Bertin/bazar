@@ -1,57 +1,57 @@
 # Bazar
 
-A full-stack marketplace web app built with Next.js, TypeScript, and Prisma. Users can create an account, sign in, manage their address, and list products for sale with images.
+Um aplicativo de marketplace full-stack construído com Next.js, TypeScript e Prisma. Usuários podem criar uma conta, fazer login, gerenciar seu endereço e cadastrar produtos para venda com imagens.
 
-## Features
+## Funcionalidades
 
-- **Authentication** — account creation and login with hashed passwords (bcrypt).
-- **User profiles** — each user has a linked address (street, neighborhood, city, state, zip).
-- **Product listings** — create, view, and manage products with title, description, price, category, and multiple images.
-- **Image uploads** — product images are hosted via Cloudinary.
-- **Private routes** — account and product management pages are only accessible to authenticated users.
-- **UI components** — built with Radix UI primitives and shadcn-style components, styled with Tailwind CSS, with light/dark theme support via next-themes.
+- **Autenticação** — criação de conta e login com senhas criptografadas (bcrypt).
+- **Perfis de usuário** — cada usuário possui um endereço vinculado (rua, bairro, cidade, estado, CEP).
+- **Listagem de produtos** — criação, visualização e gerenciamento de produtos com título, descrição, preço, categoria e múltiplas imagens.
+- **Upload de imagens** — as imagens dos produtos são hospedadas via Cloudinary.
+- **Rotas privadas** — páginas de conta e gerenciamento de produtos acessíveis apenas para usuários autenticados.
+- **Componentes de UI** — construídos com primitivos do Radix UI e componentes no estilo shadcn, estilizados com Tailwind CSS, com suporte a tema claro/escuro via next-themes.
 
-## Tech stack
+## Stack tecnológica
 
 - **Framework:** Next.js (App Router) + React
-- **Language:** TypeScript
-- **Database / ORM:** PostgreSQL + Prisma
-- **Auth:** bcrypt password hashing, Server Actions for user/session logic
-- **Image hosting:** Cloudinary (next-cloudinary)
-- **UI:** Tailwind CSS, Radix UI, lucide-react icons
+- **Linguagem:** TypeScript
+- **Banco de dados / ORM:** PostgreSQL + Prisma
+- **Autenticação:** hashing de senha com bcrypt, Server Actions para lógica de usuário/sessão
+- **Hospedagem de imagens:** Cloudinary (next-cloudinary)
+- **UI:** Tailwind CSS, Radix UI, ícones lucide-react
 
-## Project structure
+## Estrutura do projeto
 
-- `actions/` — server actions for users (`user.actions.ts`) and products (`product.actions.ts`)
-- `app/` — routes, including `(private)` route group, `login`, and `register` pages
-- `components/ui/` — reusable UI components
-- `prisma/` — database schema (`User`, `Address`, `Product`, `ProductImage`)
-- `lib/` — shared utilities
+- `actions/` — server actions para usuários (`user.actions.ts`) e produtos (`product.actions.ts`)
+- `app/` — rotas, incluindo o grupo de rotas `(private)`, páginas de login e cadastro
+- `components/ui/` — componentes de UI reutilizáveis
+- `prisma/` — schema do banco de dados (User, Address, Product, ProductImage)
+- `lib/` — utilitários compartilhados
 
-## Getting started
+## Como começar
 
-1. Clone the repository and install dependencies:
+Clone o repositório e instale as dependências:
 
-```bash
+```
 npm install
 ```
 
-2. Set up your environment variables (database connection string, Cloudinary credentials).
+Configure suas variáveis de ambiente (string de conexão do banco de dados, credenciais do Cloudinary).
 
-3. Run the Prisma migrations:
+Execute as migrações do Prisma:
 
-```bash
+```
 npx prisma migrate dev
 ```
 
-4. Start the development server:
+Inicie o servidor de desenvolvimento:
 
-```bash
+```
 npm run dev
 ```
 
-5. Open [http://localhost:3000](http://localhost:3000) in your browser.
+Abra http://localhost:3000 no seu navegador.
 
 ## Status
 
-This project is being actively revisited and improved. Feedback and suggestions are welcome.
+Este projeto está sendo revisado e aprimorado ativamente. Feedback e sugestões são bem-vindos.
